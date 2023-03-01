@@ -15,7 +15,7 @@ export const REMOVE= 'REMOVE';
 
 export function getVideogames(){
     return async function(dispatch) { 
-        const json = await axios.get("http://localhost:3001/videogames");//hago la peticion al back
+        const json = await axios.get("/videogames");//hago la peticion al back
         
         
         return dispatch({ //armo la action 
@@ -29,7 +29,7 @@ export function getNameGame(name) { //recibo el nombre como parametro
     return async function (dispatch) {//armo la fun asincrona
       try {  //hago try catch porque si no lo encuentra necesito que maneje un error
         const json = await axios.get(
-          "http://localhost:3001/videogames?name=" + name   //hago la pet al back name llega por parametro
+          "/videogames?name=" + name   //hago la pet al back name llega por parametro
         );
   
         return dispatch({        //despachp la pet
@@ -44,7 +44,7 @@ export function getNameGame(name) { //recibo el nombre como parametro
 
 export function getGenre(){
     return async function(dispatch){
-        const json = await axios.get('http://localhost:3001/genres');
+        const json = await axios.get('/genres');
         return dispatch({
             type: 'GET_GENRES',
             payload: json.data
@@ -54,14 +54,14 @@ export function getGenre(){
 
 export function postVg(payload){
   return async function(dispatch){
-        const resp = await axios.post('http://localhost:3001/videogames',payload);
+        const resp = await axios.post('/videogames',payload);
         return resp;
    }
 }
 
 export function getDetail(id){  
   return async function(dispatch){
-      const resp = await axios.get(`http://localhost:3001/videogame/${id}`);
+      const resp = await axios.get(`/videogame/${id}`);
       const detail = resp.data;
       dispatch({
           type: GET_DETAIL,

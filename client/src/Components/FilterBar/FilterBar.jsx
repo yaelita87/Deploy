@@ -2,16 +2,31 @@ import style from "./FilterBar.module.css";
 import React, {useEffect, useState} from "react";
 import {useDispatch} from 'react-redux';
 import {filterByGender} from "../../redux/actions";
-
+import axios from "axios";
 const FilterBar = ()=>{
 
     const dispatch = useDispatch();
     const [filter, setFilter] = useState([]);
     //const [exist, setExist] = useState([]);
     
+    // useEffect(() => {
+    //     fetch("http://localhost:3001/genres")
+    //       .then((response) => response.json())
+    //       .then((data) => {
+    //         data.sort((a, b) => {
+    //           if (a < b) return -1;
+    //           if (a > b) return 1;
+    //           return 0;
+    //         });
+    //         data.unshift("All");
+    //         setFilter(data);
+            
+    //       });
+        
+    //   }, []);
     useEffect(() => {
-        fetch("http://localhost:3001/genres")
-          .then((response) => response.json())
+        axios.get("/genres")
+          .then((response) => response.data)
           .then((data) => {
             data.sort((a, b) => {
               if (a < b) return -1;
@@ -20,10 +35,9 @@ const FilterBar = ()=>{
             });
             data.unshift("All");
             setFilter(data);
-            
           });
-        
       }, []);
+    
       
       function handlerFilterGender(e){ //despacho de accion traer geners
         dispatch(filterByGender(e.target.value));
