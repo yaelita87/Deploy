@@ -1,0 +1,15 @@
+
+
+.main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: transparent;
+    padding: 0px;
+}
+
+.titulo{
+    color: rgba(214, 162, 98, 0.638);
+}

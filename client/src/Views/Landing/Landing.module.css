@@ -1,0 +1,47 @@
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   background-image: url('https://windowscustomization.com/wp-content/uploads/2019/03/Arcade.gif');
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.container{
+    background-color: rgba(0, 0, 0, 0.38);
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.lanh1{
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 0px;
+}
+
+.lanh2{
+    color: #42B5CB;
+    font-weight: normal;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.boton{
+    margin-top: 30px;
+    display:inline;
+    position: relative;
+    height: 60px;
+    width: 80px;
+    border: 1px solid #42B5CB;
+    background-color: black;
+    font-weight: bold;
+    font-size: large;
+    cursor: pointer;
+    color: #42B5CB;
+    transition: background .1s ease;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
