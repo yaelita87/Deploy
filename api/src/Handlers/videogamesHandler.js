@@ -1,5 +1,5 @@
-const {getAllVG, allByName, createVideogame}= require("../Controllers/videogamesControl");
-const {Videogame, Gender}= require("../db")
+const {getAllVG, allByName, createVideogame}= require("../Controllers/videogamesControl.js");
+const {Videogame, Gender}= require("../db.js")
 
 const getVideogamesHandler = async (req, res)=>{ //revisar este handler pasarlo al controler
  

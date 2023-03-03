@@ -1,5 +1,5 @@
 const axios = require('axios');
-const {getApiVgById, getBdById} = require("../Controllers/videogameControl")
+const {getApiVgById, getBdById} = require("../Controllers/videogameControl.js")
 
 const getVideogameHandler = async (req,res) => {
     const {id} = req.params;

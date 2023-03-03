@@ -1,8 +1,8 @@
 const axios = require('axios');
-const {Videogame,Genre} = require("../db");
+const {Videogame,Genre} = require("../db.js");
 const {API_KEY} = process.env
 const {Op} = require("sequelize");
-const db = require('../db');
+const db = require('../db.js');
 
 
 const apiFilter = (item)=> {

@@ -2,8 +2,8 @@ require('dotenv').config();
 const { Sequelize } = require('sequelize');
 const fs = require('fs');
 const path = require('path');
-const VideogameModel = require("./models/Videogame");
-const GenreModel= require("./models/Gender");
+const VideogameModel = require("./models/Videogame,js");
+const GenreModel= require("./models/Gender.js");
 
 const {
   DB_USER, DB_PASSWORD, DB_HOST2,DB_PORT, DB_NAME

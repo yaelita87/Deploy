@@ -1,4 +1,4 @@
-const {getApiGender} = require("../Controllers/genresControl")
+const {getApiGender} = require("../Controllers/genresControl.js")
 
 const getGenresHanlder = async(req, res,next)=>{
     try {
