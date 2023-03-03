@@ -1,7 +1,7 @@
 const { Router } = require('express');
 
 const genresRouter = Router();
-const {getGenresHanlder} = require ("../handlers/genresHandler.js")
+const {getGenresHanlder} = require ('../Handlers/genresHandler.js')
 
 genresRouter.get ("/", getGenresHanlder);
 
