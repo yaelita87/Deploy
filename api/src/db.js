@@ -3,7 +3,7 @@ const { Sequelize } = require('sequelize');
 const fs = require('fs');
 const path = require('path');
 const VideogameModel = require("./models/Videogame");
-const GenderModel= require("./models/Gender");
+const GenreModel= require("./models/Gender");
 
 const {
   DB_USER, DB_PASSWORD, DB_HOST2,DB_PORT, DB_NAME
@@ -15,7 +15,7 @@ const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST2
 });
 
 VideogameModel(sequelize);
-GenderModel(sequelize);
+GenreModel(sequelize);
 
 const basename = path.basename(__filename);
 const modelDefiners = [];
